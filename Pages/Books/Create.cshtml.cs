@@ -21,7 +21,7 @@ namespace Toth_Antonia_Patrisia_Lab2.Pages.Books
 
         public IActionResult OnGet()
         {
-            ViewData["AuthorID"] = new SelectList(_context.Author.ToList(), "ID", "FirstName");
+            ViewData["AuthorID"] = new SelectList(_context.Set<Author>(), "ID", "FirstName");
             ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName");
             return Page();
         }
